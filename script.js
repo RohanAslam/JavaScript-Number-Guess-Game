@@ -7,6 +7,10 @@ let highscore = 0;
 
 document.querySelector('.highscore').textContent = highscore;
 
+function displayMessage(message) {
+  document.querySelector('.message').textContent = message;
+}
+
 document.querySelector('.check').addEventListener(
   'click',
 
@@ -15,7 +19,7 @@ document.querySelector('.check').addEventListener(
     console.log(guess);
 
     if (!guess) {
-      document.querySelector('.message').textContent = 'Not a Number';
+      displayMessage('Not a Number');
       //
     } else if (guess === secretNumber) {
       document.querySelector('.message').textContent =
@@ -26,18 +30,16 @@ document.querySelector('.check').addEventListener(
       document.querySelector('.number').textContent = secretNumber;
 
       if (score > highscore) {
-        highscore = score;
-        self.document.querySelector('.highscore').textContent = highscore;
+        self.document.querySelector('.highscore').textContent = score;
       }
       //
     } else if (guess !== secretNumber) {
       if (score > 1) {
-        document.querySelector('.message').textContent =
-          guess > secretNumber ? 'Too High' : 'Too low';
+        displayMessage(guess > secretNumber ? 'Too High' : 'Too low');
         score--;
         document.querySelector('.score').textContent = score;
       } else {
-        document.querySelector('.message').textContent = 'Damn, you lost..';
+        displayMessage('Damn, you lost..');
         document.querySelector('.score').textContent = 0;
       }
       //
@@ -51,7 +53,7 @@ document.querySelector('.again').addEventListener(
     score = 20;
     secretNumber = Math.trunc(Math.random() * 20) + 1;
 
-    document.querySelector('.message').textContent = 'Start guessing...';
+    displayMessage('Start guessing...');
     document.querySelector('.score').textContent = score;
     document.querySelector('.number').textContent = '?';
     document.querySelector('.guess').value = '';
