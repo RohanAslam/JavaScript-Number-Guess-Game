@@ -1,4 +1,4 @@
-# :sparkles: Number Guessing Game :1234:
+# :sparkles: JavaScript Number Guessing Game :1234:
 
 A simple yet fun **Number Guessing Game** implemented in JavaScript, HTML, and CSS. This project is my first foray into the world of JavaScript programming, and it showcases the core concepts I've learned so far.
 
@@ -12,7 +12,7 @@ A simple yet fun **Number Guessing Game** implemented in JavaScript, HTML, and C
 
 ## :loudspeaker: Introduction
 
-The **Number Guessing Game** is a single-page web application where the user tries to guess a randomly generated number between 1 and 100. The user has a limited number of attempts to guess the number, and with each incorrect guess, they receive a hint whether the correct number is higher or lower than their guess.
+The **Number Guessing Game** is a single-page web application where the user tries to guess a randomly generated number between 1 and 20. The user has a limited number of attempts to guess the number, and with each incorrect guess, they receive a hint whether the correct number is higher or lower than their guess. The gmae also remembers and record a highscore from game to game which changes when beaten.
 
 ## :star2: Features
 
@@ -50,5 +50,4 @@ As this was my first JavaScript project, I've learned and implemented various co
 - Variable scope and hoisting
 - Template literals for string interpolation
 - Responsive web design with CSS Flexbox
-
-Feel free to use this project as a reference or a starting point for creating your own number guessing game. Any feedback or suggestions for improvement are more than welcome! :smiley:
+ :smiley:
